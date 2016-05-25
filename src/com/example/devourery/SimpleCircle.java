@@ -1,7 +1,8 @@
 package com.example.devourery;
 
 public class SimpleCircle {
-    protected int x;                    //сделали protected чтобы было видно предку переменную
+    public static final int INIT_RADIUS = 40;
+    protected int x;
     protected int y;
     protected int radius;
     private int color;
