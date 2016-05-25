@@ -9,6 +9,8 @@ public class GameManager {
     private CanvasView canvasView;
     private static int width;
     private static int height;
+    public static int currentSeria = 0;
+    public static int maxSeria = 0;
 
     public GameManager(CanvasView canvasView, int w, int h) {
         this.canvasView = canvasView;
@@ -19,12 +21,14 @@ public class GameManager {
     }
 
     private void initEnemyCircles() {
+        int count = 0;
         SimpleCircle mainCircleArea = mainCircle.getCircleArea(); //Создаем невидимую область вокрг крга чтобы не появлялись очень близко круги на старте
         circles = new ArrayList<EnemyCircle>();
         for (int i = 0; i < MAX_CIRCLES; i++) {
             EnemyCircle circle;                                 //Создаем вражеские круги
             do {
-                circle = EnemyCircle.getRandomCircle();
+                if (count<2) {circle = EnemyCircle.getFoodCircle(); count++;}
+                else circle = EnemyCircle.getRandomCircle();
             } while (circle.isIntersect(mainCircleArea));       //Если созданный круг наслаивается на основной, пересоздаем его
             circles.add(circle);
         }
@@ -77,6 +81,7 @@ public class GameManager {
                     break;
                 } else {
                     gameEnd("YOU LOSE!");
+                    currentSeria = 0;
                     return;
                 }
             }
@@ -86,6 +91,8 @@ public class GameManager {
         }
         if (circles.isEmpty()) {                                 //Если круги кончились - конец игры
             gameEnd("YOU WIN!");
+            currentSeria++;
+            if (currentSeria > maxSeria) maxSeria = currentSeria;
         }
     }
 

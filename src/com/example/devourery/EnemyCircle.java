@@ -5,8 +5,8 @@ import android.graphics.Color;
 import java.util.Random;
 
 public class EnemyCircle extends SimpleCircle {
-    private static final int FROM_RADIUS = 10;
-    private static final int TO_RADIUS = 110;
+    private static final int FROM_RADIUS = 20;
+    private static final int TO_RADIUS = 70;
     public static final int ENEMY_COLOR = Color.RED;
     public static final int FOOD_COLOR = Color.rgb(0, 200, 0);
     public static final int RANDOM_SPEED = 7;
@@ -26,6 +26,17 @@ public class EnemyCircle extends SimpleCircle {
         int dx = 1 + random.nextInt(RANDOM_SPEED);
         int dy = 1 + random.nextInt(RANDOM_SPEED);
         int radius = FROM_RADIUS + random.nextInt(TO_RADIUS - FROM_RADIUS); //Выдает рандомный радиус от 10 до 110;
+        EnemyCircle enemyCircle = new EnemyCircle(x, y, radius, dx, dy);            //Создали вражеский круг
+        return enemyCircle;
+    }
+
+    public static EnemyCircle getFoodCircle() {
+        Random random = new Random();
+        int x = random.nextInt(GameManager.getWidth());                 //Выдает рандомное число входящее в ширину экрана
+        int y = random.nextInt(GameManager.getHeight());                //Выдает рандомное число входящее в высоту экрана
+        int dx = 1 + random.nextInt(RANDOM_SPEED);
+        int dy = 1 + random.nextInt(RANDOM_SPEED);
+        int radius = FROM_RADIUS + random.nextInt(INIT_RADIUS - FROM_RADIUS);   //Выдает еду
         EnemyCircle enemyCircle = new EnemyCircle(x, y, radius, dx, dy);            //Создали вражеский круг
         return enemyCircle;
     }

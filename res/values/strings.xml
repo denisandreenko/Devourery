@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">devourery</string>
+    <string name="item_CWS">CWS</string>
+    <string name="item_MWS">MWS</string>
+    <string name="item_about">Об авторе</string>
+    <string name="item_site">Офф. сайт</string>
+    <string name="item_exit">Выход</string>
 </resources>

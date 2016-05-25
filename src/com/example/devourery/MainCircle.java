@@ -4,7 +4,6 @@ package com.example.devourery;
 import android.graphics.Color;
 
 public class MainCircle extends SimpleCircle{
-    public static final int INIT_RADIUS = 50;
     public static final int MAIN_SPEED = 40;
     public static final int OUR_COLOR = Color.BLUE;
 
@@ -25,6 +24,6 @@ public class MainCircle extends SimpleCircle{
     }
 
     public void growRadius(SimpleCircle circle) {                               //Увеличиваем радиус нашего круга на радиус поглощенного
-        radius = (int) Math.sqrt(Math.pow(radius, 2) + Math.pow(circle.radius, 2));
+        radius = (int) Math.sqrt(Math.pow(radius, 2) + Math.pow(circle.radius, 2)/2);
     }
 }
