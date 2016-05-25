@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/CWS"
+            android:orderInCategory="1"
+            android:onClick="onSeria"
+            android:title="@string/item_CWS"
+            android:showAsAction="always" />
+
+    <item
+            android:id="@+id/MWS"
+            android:orderInCategory="3"
+            android:onClick="onMaxSeria"
+            android:title="@string/item_MWS"
+            android:showAsAction="always" />
+
+    <item
+            android:id="@+id/about"
+            android:orderInCategory="4"
+            android:onClick="onAbout"
+            android:title="@string/item_about"
+            android:showAsAction="never" />
+    <item
+            android:id="@+id/site"
+            android:orderInCategory="5"
+            android:onClick="onSite"
+            android:title="@string/item_site"
+            android:showAsAction="never" />
+    <item
+            android:id="@+id/exit"
+            android:orderInCategory="6"
+            android:onClick="onExit"
+            android:title="@string/item_exit"
+            android:showAsAction="never" />
+
+</menu>
