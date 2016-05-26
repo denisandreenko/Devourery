@@ -77,10 +77,4 @@ public class CanvasView extends View implements ICanvasView{                    
         invalidate();                                       //View перерисовывает себя
         return true;
     }
-
-
-    // todo DZ
-//    public static int recalculateRadius(int radius) {
-//        return radius * 768 < height ? width : height;
-//    }
 }
