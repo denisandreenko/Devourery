@@ -34,7 +34,7 @@ public class SimpleCircle {
     }
 
     public SimpleCircle getCircleArea() {
-        return new SimpleCircle(x, y, radius * 3);    //Создаем невидимую область вокрг крга чтобы не появлялись очень близко круги на старте
+        return new SimpleCircle(x, y, radius * 3);  //Создаем невидимую область вокрг круга чтобы не появлялись очень близко круги на старте
     }
 
     public boolean isIntersect(SimpleCircle circle) {        //Проверяем, пересекаются ли круги

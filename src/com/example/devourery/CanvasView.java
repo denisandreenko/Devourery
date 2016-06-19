@@ -41,8 +41,7 @@ public class CanvasView extends View implements ICanvasView{                    
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-       // gameManager.onDraw(canvas);
-        this.canvas = canvas;                             //Чтобы видеть ссылку на canvas
+        this.canvas = canvas;
         gameManager.onDraw();
     }
 

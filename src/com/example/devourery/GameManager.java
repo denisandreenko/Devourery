@@ -75,7 +75,7 @@ public class GameManager {
             if (mainCircle.isIntersect(circle))                 //Если пересеклись с врагом то игра закончена
             {
                 if (circle.isSmallerThan(mainCircle )) {       //Если враг становить меньше то становиться едой
-                    mainCircle.growRadius(circle);              //Растем на радис поглощенного круга
+                    mainCircle.growRadius(circle);              //Растем на радиус поглощенного круга
                     circleForDel = circle;
                     calculateAndSetCirclesColor();              //Т.к. размер главного изменился, делаем переоценку всех цветов
                     break;
